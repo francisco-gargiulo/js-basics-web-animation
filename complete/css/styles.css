@@ -1,0 +1,73 @@
+html {
+  background-color: black;
+}
+
+body {
+  display: flex;
+}
+
+.frame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  width: 640px;
+  height: 360px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.player {
+  position: absolute;
+  bottom: 0;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  width: 32px;
+  height: 64px;
+}
+
+.background {
+  height: calc(360px - 32px);
+  width: 1280px;
+  margin-right: -640px;
+  background-size: 640px 100%;
+  background-image: url("../img/super-mario_background--background.png");
+}
+
+.ground {
+  height: 32px;
+  width: 1280px;
+  margin-right: -640px;
+  background-size: 640px 100%;
+  background-image: url("../img/super-mario_background--ground.png");
+}
+
+.clouds {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+}
+
+.clouds img {
+  position: absolute;
+}
+
+.clouds > img.small {
+  width: 32px;
+  right: -32px;
+  bottom: 33%;
+}
+.clouds > img.medium {
+  width: 64px;
+  right: -64px;
+  bottom: 48%;
+}
+.clouds > img.big {
+  width: 128px;
+  right: -128px;
+  bottom: 66%;
+}
+
